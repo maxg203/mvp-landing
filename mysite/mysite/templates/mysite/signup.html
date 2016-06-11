@@ -4,15 +4,16 @@
         <meta charset="utf-8">
         <title>Vidwork</title>
 
+        {% load staticfiles %}
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-	    <link rel="stylesheet" href="css/style.css" title="main" charset="utf-8">
+	    <link rel="stylesheet" href="{% static "mysite/css/style.css" %}" title="main" charset="utf-8">
     </head>
     <body>
 
         <nav class="navbar navbar-inverse navbar-fixed-top">
           <div class="container">
             <div class="navbar-header">
-              <a class="navbar-brand" href="index.html">Vidwork</a>
+              <a class="navbar-brand" href="/">Vidwork</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <form class="navbar-form navbar-right">
@@ -42,13 +43,18 @@
             <p>
                 <small>We won't use your email for anything else.</small>
             </p>
+            <br>
+            <br>
+            <p>
+                <a class="btn btn-success btn-lg outline" href="/" role="button">Back</a>
+            </p>
           </div>
         </div>
-
           <footer>
               <div class="container">
                   <div class="row">
                       <div class="col-xs-12">
+                      <hr>
                           <p>&copy; 2016 Vidwork, Inc.</p>
                       </div>
                   </div>
