@@ -4,14 +4,21 @@
         <meta charset="utf-8">
         <title>Vidwork</title>
 
+        {% load staticfiles %}
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-	    <link rel="stylesheet" href="css/style.css" title="main" charset="utf-8">
+	    <link rel="stylesheet" href="{% static "mysite/css/style.css" %}" title="main" charset="utf-8">
     </head>
     <body>
 
         <nav class="navbar navbar-inverse navbar-fixed-top">
           <div class="container">
             <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
               <a class="navbar-brand" href="">Vidwork</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
@@ -22,7 +29,7 @@
                 <div class="form-group">
                   <input type="email" placeholder="Email" class="form-control">
                 </div>
-                <button type="submit" class="btn btn-success">Sign up</button>
+                <button type="submit" class="btn btn-success">Get Notified</button>
               </form>
             </div><!--/.navbar-collapse -->
           </div>
@@ -32,9 +39,9 @@
         <div class="jumbotron">
           <div class="container">
             <h1>The Vision</h1>
-            <h2>Connect everyone in the world to everyone else in the world.</h2>
+            <h2>Connect every person to every other person through common interests.</h2>
             <p>
-                People thus far have used social networks primarily to strengthen existing relationships. The idea is to allow <i>anyone</i> to meet <i>anyone else</i> through their common interests so that they can connect, collaborate, motivate and just be way more productive together.
+                People thus far have used social networks primarily to strengthen existing relationships. The idea is to allow anyone to meet <i>anyone else</i> through their <i>common interests</i> so that they can connect, collaborate, motivate the people connected to them and just be way more productive together.
             </p>
             <p><a class="btn btn-success btn-lg outline" href="signup.html" role="button">Learn more »</a></p>
         </center>
@@ -47,7 +54,7 @@
             <div class="col-md-4">
               <h2>Difference from Facebook?</h2>
               <p>
-                  Facebook has had outstanding success in allowing people to connect <i>based on their existing relationships</i>. In our opinion, there is still a whole world of opportunity when it comes to meeting people <i>without existing relationships</i>. We intend to do this by linking people together through their common interests.
+                  Facebook has had outstanding success in allowing people to connect <i>based on their existing relationships</i>. In our opinion, there is still a whole world of opportunity when it comes to meeting people <i>without existing relationships</i>. We intend to do this by linking like-minded people together through their common interests.
               </p>
               <p><a class="btn btn-default" href="signup.html" role="button">View details »</a></p>
             </div>
@@ -72,6 +79,8 @@
           </footer>
         </div> <!-- /container -->
 
+        <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
     </body>
 </html>
