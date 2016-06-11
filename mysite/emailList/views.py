@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from mysite.models import Email
+from emailList.models import Email
 
 def home(request):
     return render(request, 'mysite/index.html')
@@ -18,6 +18,13 @@ def email(request):
         middle_name = names[1]
     else:
         middle_name = ""
+
+    if len(names) == 1:
+        last_name = ""
+
+    for each in first_name, middle_name, last_name:
+        small = each.lower()                        # Convert string to lower case
+        each = small[0].upper() + small[1:].lower() # Format data ready for storing in database
 
     print(first_name, middle_name, last_name, email)
 
