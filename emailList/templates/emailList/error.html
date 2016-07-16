@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Vidwork</title>
+
+        {% load staticfiles %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	    <link rel="stylesheet" href="{% static "emailList/css/style.css" %}" title="main" charset="utf-8">
+    </head>
+    <body>
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img src="{% static 'emailList/images/logo.png' %}" %} alt="Logo" /></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <form class="navbar-form navbar-right" method="POST" action="/email/">{% csrf_token %}
+                <div class="form-group">
+                  <input type="name" name="name" placeholder="Full Name" class="form-control">
+                </div>
+                <div class="form-group">
+                  <input type="email" name="email" placeholder="Email" class="form-control">
+                </div>
+                <button type="submit" name="commit" class="btn btn-success">Get Notified</button>
+              </form>
+            </div><!--/.navbar-collapse -->
+          </div>
+        </nav>
+
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div class="jumbotron">
+          <div class="container">
+            <h1>Oops!</h1>
+            <h2>It appears that you didn't fill out that form quite right!</h2>
+            <p>
+                Please try again by entering your real name and email address in the corresponding fields at the top of this page.
+            </p>
+            <p>
+                <small>We won't share your email with anyone else.</small>
+            </p>
+            <br>
+            <p>
+                <a class="btn btn-success btn-lg" href="/" role="button">Back</a>
+            </p>
+          </div>
+        </div>
+          <footer>
+              <div class="container">
+                  <div class="row">
+                      <div class="col-xs-12">
+                      <hr>
+                          <p>Copyright &copy; 2016 Vidwork, Inc. All Rights Reserved.</p>
+                      </div>
+                  </div>
+              </div>
+
+          </footer>
+        </div> <!-- /container -->
+
+
+        <!-- Bootstrap core JavaScript -->
+        <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+    </body>
+</html>

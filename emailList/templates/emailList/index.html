@@ -36,9 +36,27 @@
           </div>
         </nav>
 
+        <div class="col-xs-6 col-xs-offset-3">
+            {% if messages %}
+            {% for message in messages %}
+            {% if message.tags %}
+                <div class="{{ message.tags }}">
+            {% endif %}
+                <div class="alert alert-success" role="alert">
+                    <center>
+                  <strong>Thank you!</strong> We will notify you via <u><strong>{{request.session.user_email}}</strong></u> when we're ready to launch!
+              </center>
+                </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+
+
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="jumbotron">
           <div class="container">
+              <br>
             <h1>The Vision</h1>
             <h2>Connect every person to every other person through their common interests.</h2>
             <p>
