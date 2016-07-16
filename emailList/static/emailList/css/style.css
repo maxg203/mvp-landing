@@ -11,10 +11,6 @@ body {
     padding: 12px 22px;
 }
 
-.btn.outline:hover {
-    padding: 12px 22px;
-}
-
 .btn-success.outline {
     color: #000000;
     border: 4px solid #000000;
@@ -22,7 +18,52 @@ body {
 }
 
 .btn-success.outline:hover {
-    border: 4px solid rgb(0, 170, 88);
+    border: 4px solid rgb(35, 200, 146);
     color: #ffffff;
     background: rgb(0, 170, 88);
+}
+
+/* Custom dark grey navbar colour */
+.custom-color {
+    background-color: rgb(51, 51, 51);
+}
+
+.alert-colors {
+    margin-top: 20px;
+    border: 4px solid rgb(35, 200, 146);  /*rgb(35, 200, 165); rgb(68, 221, 189); rgb(0, 170, 88);*/
+    background-color: rgb(35, 200, 146);
+    color: #ffffff;
+}
+
+/* Custom buttons */
+.std-button {
+    background-color: rgb(35, 200, 146);
+    outline-color: rgb(35, 200, 146);
+    color: #ffffff;
+    background: rgb(35, 200, 146);
+    border: none;
+}
+
+.std-button:hover {
+    background-color: rgb(26, 148, 108);
+    outline-color: rgb(26, 148, 108);
+    color: #ffffff;
+    background: rgb(26, 148, 108);
+    border: none;
+}
+
+.nav-button {
+    background-color: rgb(35, 200, 146);
+    outline-color: rgb(35, 200, 146);
+    color: #ffffff;
+    background: rgb(35, 200, 146);
+    border: 1px solid rgb(35, 200, 146);
+}
+
+.nav-button:hover {
+    background-color: rgb(26, 148, 108);
+    outline-color: rgb(26, 148, 108);
+    color: #ffffff;
+    background: rgb(26, 148, 108);
+    border: 1px solid rgb(26, 148, 108);
 }

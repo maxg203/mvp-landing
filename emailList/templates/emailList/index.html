@@ -7,10 +7,14 @@
         {% load staticfiles %}
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	    <link rel="stylesheet" href="{% static "emailList/css/style.css" %}" title="main" charset="utf-8">
+
+
+        <!-- Fix viewing issues on mobile -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     </head>
     <body>
 
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar navbar-inverse navbar-fixed-top custom-color">
           <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -30,19 +34,19 @@
                   <div class="form-group">
                     <input type="email" name="email" placeholder="Email" class="form-control">
                   </div>
-                  <button type="submit" name="commit" class="btn btn-success">Get Notified</button>
+                  <button type="submit" name="commit" class="btn btn-success nav-button">Get Notified</button>
                 </form>
             </div><!--/.navbar-collapse -->
           </div>
         </nav>
 
-        <div class="col-xs-6 col-xs-offset-3">
+        <div class="col-xs-12">
             {% if messages %}
             {% for message in messages %}
             {% if message.tags %}
                 <div class="{{ message.tags }}">
             {% endif %}
-                <div class="alert alert-success" role="alert">
+                <div class="alert alert-success alert-colors" role="alert">
                     <center>
                   <strong>Thank you!</strong> We will notify you via <u><strong>{{request.session.user_email}}</strong></u> when we're ready to launch!
               </center>
@@ -64,7 +68,7 @@
             </p>
             <br>
             <p>
-                <a class="btn btn-success btn-lg" href="signup" role="button">Learn more »</a>
+                <a class="btn btn-success btn-lg std-button" href="signup" role="button">Learn more »</a>
             </p>
           </div>
         </div>
@@ -99,31 +103,6 @@
                 </p>
               <p><a class="btn btn-default" href="signup" role="button">View details »</a></p>
             </div>
-          </div>
-          <hr>
-          <div class="container">
-              <div class="row">
-                  <h1>Features</h1>
-                  <strong><i>Messaging</i></strong>
-                  <p>
-                      Message anyone who you want to connect with to see if you are going to make a new friend or colleague.
-                  </p>
-
-                  <strong><i>Live Video Chat</i></strong>
-                  <p>
-                      Video chat with like-minded people across the world to share your stories about your shared interests!
-                  </p>
-
-                  <strong><i>User Profiles</i></strong>
-                  <p>
-                      Browse anyones user profile to see all the information they have chosen to share with you. Optionally upload your own video to your profile to let people who you want to allow get to know you fast!
-                  </p>
-                  <div class="col-md-4">
-
-                  </div>
-
-              </div>
-
           </div>
           <hr>
 
