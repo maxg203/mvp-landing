@@ -7,13 +7,16 @@
         {% load staticfiles %}
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	    <link rel="stylesheet" href="{% static "emailList/css/style.css" %}" title="main" charset="utf-8">
+	    <link rel="stylesheet" href="{% static "emailList/css/style.css" %}" title="main" charset="utf-8">
 
-
+        <script type="text/javascript" src="{% static "emailList/js/jquery-3.1.0.min.js" %}"></script>
+        <script type="text/javascript" src="{% static "emailList/js/main.js" %}"></script>
         <!-- Fix viewing issues on mobile -->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     </head>
-    <body>
 
+    <body id="everything">
+        <div id="main">
         <nav class="navbar navbar-inverse navbar-fixed-top custom-color">
           <div class="container">
             <div class="navbar-header">
@@ -46,7 +49,7 @@
             {% if message.tags %}
                 <div class="{{ message.tags }}">
             {% endif %}
-                <div class="alert alert-success alert-colors" role="alert">
+                <div class="alert alert-success alert-colors col-xs-8 col-xs-offset-2" role="alert">
                     <center>
                   <strong>Thank you!</strong> We will notify you via <u><strong>{{request.session.user_email}}</strong></u> when we're ready to launch!
               </center>
@@ -62,7 +65,7 @@
             <center>
           <div class="container">
               <br>
-            <h1>The Vision</h1>
+            <h1 id="vision">Its time for a new kind of social media.</h1>
             <h2>Make meaningful connections between like-minded people.</h2>
             <p>
                 People thus far have used social networks primarily to strengthen existing relationships. Our idea is to allow anyone to interact with others through their mutual interests so that connections are meaningful, lasting and might one day entirely change the way we live our lives.
@@ -107,10 +110,11 @@
             <p>Copyright © 2016 Vidwork LLC. All Rights Reserved.</p>
           </footer>
         </div> <!-- /container -->
-
         <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+        </div>
 
     </body>
 </html>
