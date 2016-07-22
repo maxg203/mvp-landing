@@ -77,27 +77,26 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 """
 Database Configuration for Production Server
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'landingPageDB',
-        'USER': 'admin',
-        'PASSWORD': 'aReallySecurePassword!!',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-        'PORT': '',
-    }
-}
 """
+ DATABASES = {
+     'default': {
+         'ENGINE': 'django.db.backends.mysql',
+         'NAME': 'landingPageDB',
+         'USER': 'admin',
+         'PASSWORD': '',
+         'HOST': 'localhost',
+         'PORT': '',
+     }
+ }
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
